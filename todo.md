@@ -8,4 +8,5 @@ allow user to select coins to watch or monitor its changes - alert
 
 fast trade from the widget - trade
 
+t
 store api key with storage api and encrypt it with system info - security
