@@ -1,4 +1,4 @@
-get all existing trades - account
+get all existing trades the user holds - account
 
 alert system to notify user of crash and rise - alert
 
