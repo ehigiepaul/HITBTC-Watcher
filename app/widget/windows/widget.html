@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<script src="../../asset/js/vue.js"></script>
+	<link href="../../asset/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="app" id='app'>
+		<div class="widget">
+			<div class="menuBar" data-pg-collapsed>
+				<i class="fa fa-align-justify fa-lg"></i>
+			</div>
+			<div class="option" data-pg-collapsed>
+				<button id="widgetSetting">Setting</button>
+				<button id="widgetDisplay" @click="hide()">hide</button>
+				<button id="widgetQuit" @click="quit()">quit</button>
+			</div>
+			<div class="cardView">
+				<div class="card" v-for="n in ticker">
+					<div class="ticker" data-pg-collapsed>
+						<div class="currency">
+							<p>{{n.symbol}}</p>
+						</div>
+						<div class="changes">
+							<p>{{(((n.last - n.open)/n.last)*100).toFixed(2)}} %</p>
+						</div>
+					</div>
+					<div class="value" data-pg-collapsed>
+						<div class="price">
+							<p>{{n.last}}</p>
+						</div>
+						<div class="symbol">
+							<p>USD</p>
+						</div>
+					</div>
+					<div class="volume" data-pg-collapsed>
+						<p>VOL</p>
+						<div class="totalVol" data-pg-collapsed>
+							<p>{{parseInt(n.volume)}}&nbsp;</p>
+							<p>btc</p>
+						</div>
+						<div class="ticker"> </div>
+					</div>
+					<div class="holds" data-pg-collapsed>
+						<div class="myHold">
+							<p>{{n.hold}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="addSym" data-pg-collapsed>
+				<i class="fa fa-lg fa-plus"></i>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="./widget.js"></script>
+
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "hitbtc-watcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bracketcore/HITBTC-Watcher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bracketcore/HITBTC-Watcher/issues"
+  },
+  "homepage": "https://github.com/Bracketcore/HITBTC-Watcher#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "ws": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/nw.gui": "0.0.20",
+    "@types/nw.js": "^0.13.7"
+  }
+}
